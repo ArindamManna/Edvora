@@ -1,0 +1,96 @@
+@import "mixins";
+@import "globals";
+@import "variables";
+@import "animation";
+@import "filter";
+@import "Product";
+@import "responcive";
+
+.App {
+  height: 100vh;
+  width: 100vw;
+  background-color: #292929;
+  font-family: "SF Pro Display", sans-serif;
+  // @include breakpoint-down(small) {
+  //   flex-direction: column;
+  // }
+
+  .main_container {
+    width: 61.5rem;
+    margin-left: 1.25rem;
+    @include breakpoint-down(small) {
+      width:calc(100% - 1.25rem);
+    }
+    @include breakpoint-down(medium){
+      margin-right: 1rem;
+    }
+    overflow-y: scroll;
+    .edvora {
+      // border: $Basic_border;
+      margin-top: 2.688rem;
+      @include breakpoint-down(small){
+        margin-top:2rem;
+        // margin-left: 0.7rem;
+      }
+      .span{
+
+        font-size: 2.188rem;
+        font-weight: bold;
+        color: rgba(255, 255, 255, 0.87);
+        line-height: 2.563rem;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      }
+      .menu_icon {
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 1.5rem;
+          z-index: 6;
+        @include breakpoint-up(medium){
+          display: none;
+          // border:$Basic_border
+          
+        }
+        // border: $Basic-border;
+        margin-right: 1rem;
+        > span {
+          display: block;
+          // background-color: black;
+          background-color: white;
+          height: 0.2rem;
+          width: 2.2rem;
+          transform-origin: 4px 3px;
+          transition-duration: 300ms;
+      
+          &:not(:last-child) {
+            margin-bottom: 0.3rem;
+          }
+        }
+      
+        &.open {
+          > span:first-child {
+            transform: rotate(45deg);
+          }
+          > span:nth-child(2) {
+            opacity: 0;
+          }
+          > span:last-child {
+            transform: rotate(-45deg);
+          }
+        }
+      }
+      
+    }
+    .Products_text {
+      margin-top: 1.313rem;
+      font-size: 1.563rem;
+      font-weight: 500;
+      line-height: 1.875rem;
+      color: rgba(255, 255, 255, 0.5);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .products_container {
+      margin-top: 1.313rem;
+      width: 100%;
+    }
+  }
+}

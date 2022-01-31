@@ -1,0 +1,14 @@
+// .close_sidebar{
+// @include breakpoint-down(small){
+//         display: none;
+//     }
+// }
+.close_filter{
+    animation: closeSidebar 300ms linear forwards;
+    @include breakpoint-up(medium){
+        animation: openSidebar 300ms linear forwards;
+      }
+}
+.open_filter{
+    animation: openSidebar 300ms linear forwards;
+}

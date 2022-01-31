@@ -1,0 +1,25 @@
+@keyframes openSidebar{
+    from {
+        width:0;
+    }
+    to{
+        width:14.25rem;
+    }
+}
+.openSidebar{
+    animation: openSidebar 300ms linear forwards;
+    // width:14.25rem;
+//   padding: 1rem 2rem;
+}
+@keyframes closeSidebar{
+    from {
+        width:14.25rem;
+    }
+    to{
+        width:0;
+    }
+}
+.closeSidebar{
+    animation: closeSidebar 300ms linear forwards;
+    // padding: 1rem 2rem;
+}

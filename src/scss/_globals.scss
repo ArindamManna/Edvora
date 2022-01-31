@@ -1,0 +1,123 @@
+html {
+  // font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  // font-size: 1.6rem;
+  // font-family: "Noto Sans KR", sans-serif;
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  // overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+::-webkit-scrollbar {
+  width: 0; 
+  height: 0;/* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+// :root {
+// }
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+}
+
+// Button
+button,
+.button {
+  font-family: "Mukta", sans-serif;
+  color: white;
+  cursor: pointer;
+}
+//  display none
+.display {
+  &-none {
+    display: none;
+  }
+}
+
+// position
+.position {
+  &-re {
+    position: relative;
+  }
+  &-ab {
+    position: absolute;
+  }
+}
+// overflow hidden
+.overflow {
+  &-vis {
+    overflow: visible;
+  }
+
+  &-hid {
+    overflow: hidden;
+  }
+}
+
+// Flexbox
+.flex {
+  display: flex;
+  &-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-jc-sb {
+    justify-content: space-between;
+  }
+  &-jc-sa {
+    justify-content: space-around;
+  }
+  &-jc-c {
+    justify-content: center;
+  }
+  &-jc-fe {
+    justify-content: flex-end;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+  &-ai-fs {
+    align-items: flex-start;
+  }
+
+  &-di-co {
+    flex-direction: column;
+  }
+  &-di-rr {
+    flex-direction: row-reverse;
+  }
+}
+
+// Visibility
+.visibility {
+  &-hid {
+    visibility: hidden;
+  }
+  &-vis {
+    visibility: visible;
+  }
+}
+
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
